@@ -29,9 +29,11 @@ def add(text, date=None, category=None, description=None):
 
     if category is None:
         category = "default"
+
+    if description is None:
+        description = ""
     items.append(Item(text, date, category, description))
     items.sort(key=lambda x: (x.date, x.category))
-
 
 
 def get_all():
