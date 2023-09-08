@@ -1,6 +1,8 @@
 import datetime
 import operator
 from dataclasses import dataclass
+import io
+import csv
 
 items = []
 
@@ -12,6 +14,23 @@ class Item:
     category: str
     description: str
     isCompleted: bool = False
+
+
+def get_csv():
+    output = io.StringIO()
+    writer = csv.writer(output)
+    writer.writerow(["Titel", "Datum", "Kategorie", "Beschreibung", "Erledigt?"])
+    for item in items:
+        writer.writerow(
+            [
+                item.text,
+                item.date.strftime("%d.%m.%Y"),
+                item.category,
+                item.description,
+                "x" if item.isCompleted else "o",
+            ]
+        )
+    return output.getvalue()
 
 
 def oneWeekFromToday():

@@ -5,6 +5,15 @@ import helper
 app = Flask(__name__)
 
 
+@app.route("/getCSV")
+def get_csv():
+    return Response(
+        helper.get_csv(),
+        mimetype="text/csv",
+        headers={"Content-disposition": "attachment; filename=zu-bbbearbeiten.csv"},
+    )
+
+
 @app.route("/")
 def index():
     items = helper.get_all()
