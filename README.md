@@ -1,6 +1,8 @@
 # zu-bbbearbeiten
 
-[![Coverage Status](https://coveralls.io/repos/github/Aequivinius/zu-bbbearbeiten-stateless/badge.svg?branch=1641-musterloesung)](https://coveralls.io/github/Aequivinius/zu-bbbearbeiten-stateless?branch=1641-musterloesung)
+[![Coverage Status](https://coveralls.io/repos/github/Aequivinius/zu-bbbearbeiten-stateless/badge.svg?branch=1641-musterloesung)](https://coveralls.io/github/Aequivinius/zu-bbbearbeiten-stateless?branch=1641-musterloesung)  
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https://github.com/Aequivinius/zu-bbbearbeiten-stateless)
+ 
 
 Nostrud non eiusmod elit magna pariatur sit dolor commodo quis reprehenderit elit sit amet id. Ea cupidatat ea eiusmod deserunt ut laborum id enim consequat non ipsum elit dolore sit. Laborum non elit cillum irure aute anim duis aliqua labore duis pariatur. Adipisicing dolore id anim esse non adipisicing officia commodo consequat non. Ullamco aliquip enim ad laboris adipisicing ut duis.
 
