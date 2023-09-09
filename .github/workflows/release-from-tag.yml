@@ -1,0 +1,22 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Release from tag
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+    - name: Set up Python 3.11
+      uses: actions/checkout@v3
+    - name: Publish release
+      uses: ghalactic/github-release-from-tag@v5
