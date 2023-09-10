@@ -39,10 +39,9 @@ jobs:
         python_ver: '3.11'
         spec: 'main.spec'
         requirements: 'requirements.txt'
-        upload_exe_with_name: 'zu-bbbearbeiten.exe'
 
     - name: Upload Release Asset
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run:
-        gh release upload latest ./dist/zu-bbbearbeiten.exe
+        gh release upload latest ./dist/main.exe
