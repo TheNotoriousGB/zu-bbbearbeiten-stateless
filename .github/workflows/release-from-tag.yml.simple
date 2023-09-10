@@ -20,4 +20,3 @@ jobs:
       with:
          prerelease: "false"
          reactions: heart,rocket,eyes
-  

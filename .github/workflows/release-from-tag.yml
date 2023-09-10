@@ -32,10 +32,10 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build for Windows
-      run: pyinstaller -F --add-data "templates;templates" --add-data "helper.py;." main.py
+      run: pyinstaller --onefile --add-data templates;templates --add-data helper.py;. main.py
 
     - name: Upload Release Asset
-      id: upload-release-asset 
+      id: upload-release-asset
       uses: Fhwang0926/upload-release-asset@v1.1.8
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
