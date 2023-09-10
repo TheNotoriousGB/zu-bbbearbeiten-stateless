@@ -23,16 +23,14 @@ jobs:
          prerelease: "false"
          reactions: heart,rocket,eyes
 
-    - name: setup python
-      uses: actions/setup-python@v2
+    - name: Create Executable
+      uses: sayyid5416/pyinstaller@v1
       with:
-        python-version: 3.11
-
-    - name: Install pyinstaller
-      run: pip install pyinstaller
-
-    - name: Build for Windows
-      run: pyinstaller --onefile --add-data templates;templates --add-data helper.py;. main.py
+        python_ver: '3.11'
+        spec: 'main.spec'
+        requirements: 'requirements.txt'
+        upload_exe_with_name: 'zu-bbbearbeiten.exe'
+        options: --onefile
 
     - name: Upload Release Asset
       id: upload-release-asset
@@ -41,5 +39,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.publish-release.outputs.upload_url }}
-        asset_name: ./dist/main.exe
+        asset_name: ./dist/zu-bbbearbeiten.exe
         asset_label: latest
