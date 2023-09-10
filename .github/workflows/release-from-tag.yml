@@ -32,7 +32,7 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build for Windows
-      run: pyinstaller -F --add-data "templates;templates" --add-data "helper.py;." main.py
+      run: pyinstaller -F --add-data 'templates;templates' --add-data 'helper.py;.' main.py
 
     - name: Upload Release Asset
       id: upload-release-asset 
