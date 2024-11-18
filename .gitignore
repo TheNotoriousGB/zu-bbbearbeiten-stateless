@@ -1,2 +1,20 @@
-__pycache__
-*~
+# Python Bytecode-Dateien
+__pycache__/
+
+# Verzeichnisse und Dateien von pytest ignorieren
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+# Testverzeichnisse (falls vorhanden)
+test_/
+
+# Virtuelle Umgebungen
+.venv/
+env/
+venv/
+
+# Flask spezifisch: Datenbankdateien, Logs, etc.
+instance/
+*.db
+*.log
